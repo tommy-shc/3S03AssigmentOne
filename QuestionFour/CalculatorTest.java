@@ -6,7 +6,7 @@ public class CalculatorTest {
     private Calculator calculator;
 
     // This method runs before each test method
-    @BeforeMethod
+    @BeforeEach
     public void setUp() {
         calculator = new Calculator();
     }
@@ -26,7 +26,7 @@ public class CalculatorTest {
 
         //massive number divided by 0.5 == massive number x2
         double result = calculator.divide(massiveNumber, smallFraction);
-s
+
         //Make sure it becomes positive inf, doesnt overflow to small number
         assertEquals(Double.POSITIVE_INFINITY, result, "Should overflow to positive infinity");
     }
